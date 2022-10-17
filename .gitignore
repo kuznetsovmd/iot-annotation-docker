@@ -1,0 +1,7 @@
+
+iot-*
+
+mariadb_data/*
+php_data/*
+
+*.zip
