@@ -1,7 +1,7 @@
-CREATE USER iot_annotation IDENTIFIED BY 'secret';
-CREATE DATABASE iot_annotation;
-GRANT ALL PRIVILEGES ON iot_annotation.* TO iot_annotation;
-USE iot_annotation;
+CREATE USER annotation IDENTIFIED BY 'secret';
+CREATE DATABASE annotation;
+GRANT ALL PRIVILEGES ON annotation.* TO annotation;
+USE annotation;
 
 -- Migrations --
 CREATE TABLE `users` (
