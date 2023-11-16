@@ -10,7 +10,7 @@ services:
     tty: true
     volumes:
       - ./php_data:/var/www/html/resources/sessions
-      - /var/www/html
+      - ./php-fpm/privacy-annotation-backend:/var/www/html
     networks:
       - app_network
 
@@ -32,7 +32,7 @@ services:
       context: ./nginx
     tty: true
     volumes:
-      - /var/www/html
+      - ./nginx/privacy-annotation-frontend:/var/www/html
     ports:
       - "80:80"
       - "8080:8080"
