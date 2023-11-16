@@ -1,5 +1,5 @@
 CREATE USER annotation IDENTIFIED BY 'secret';
-CREATE DATABASE annotation;
+CREATE DATABASE annotation CHARACTER SET = 'utf8mb4' COLLATE = 'utf8mb4_unicode_ci';
 GRANT ALL PRIVILEGES ON annotation.* TO annotation;
 USE annotation;
 
