@@ -80,7 +80,7 @@ INSERT INTO `users` (
     `name`,
     `email` 
 ) VALUES
-    ('Admin', 'admin@iot_annotation.box');
+    ('Admin', 'admin@annotation.box');
 
 INSERT INTO `passwords` (
     `id`, 
