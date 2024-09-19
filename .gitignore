@@ -1,7 +1,4 @@
-
-iot-*
-
-mariadb_data/*
-php_data/*
+mariadb-data/*
+php-fpm-data/*
 
 *.zip
