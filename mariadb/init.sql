@@ -1,5 +1,5 @@
 CREATE USER annotation IDENTIFIED BY 'secret';
-CREATE DATABASE annotation;
+CREATE DATABASE annotation CHARACTER SET = 'utf8mb4' COLLATE = 'utf8mb4_unicode_ci';
 GRANT ALL PRIVILEGES ON annotation.* TO annotation;
 USE annotation;
 
@@ -51,17 +51,6 @@ CREATE TABLE `policies` (
     `content`   MEDIUMTEXT
 );
 
-CREATE TABLE `products` (
-    `id`           INT PRIMARY KEY AUTO_INCREMENT,
-    `manufacturer` VARCHAR(255),
-    `keyword`      VARCHAR(255),
-    `product_url`  MEDIUMTEXT,
-    `website_url`  MEDIUMTEXT,
-    `policy_url`   VARCHAR(255),
-    `policy_hash`  VARCHAR(255) DEFAULT NULL,
-    FOREIGN KEY (`policy_hash`) REFERENCES `policies`(`hash`)
-);
-
 CREATE TABLE `selections` (
     `id`                INT PRIMARY KEY AUTO_INCREMENT,
     `starts_on`         INT,
@@ -80,7 +69,7 @@ INSERT INTO `users` (
     `name`,
     `email` 
 ) VALUES
-    ('Admin', 'admin@iot_annotation.box');
+    ('Admin', 'admin@annotation.box');
 
 INSERT INTO `passwords` (
     `id`, 
